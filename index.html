@@ -1,1 +1,67 @@
 
+html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market + Tropical Logistics</title>
+<style>
+body{font-family:Arial;padding:0;margin:0;background:#f4f4f4}
+header{background:#0a7a42;color:#fff;padding:20px;text-align:center}
+.product{background:#fff;padding:15px;margin:10px;border-radius:10px}
+button{background:#25D366;color:#fff;border:none;padding:10px 15px;border-radius:5px;cursor:pointer;width:100%;font-size:16px}
+input{width:95%;padding:10px;margin:5px}
+.section{padding:10px}
+h2{color:#0a7a42}
+</style>
+</head>
+<body>
+<header>
+<h1>Market + Tropical Logistics</h1>
+<p>Market Yako - Tunakuletea Mzigo Popote!</p>
+</header>
+
+<div class="section">
+<h2>Bidhaa Zetu</h2>
+
+<div class="product">
+<h3>Mchele 5kg</h3>
+<p>Bei: TZS 18,000</p>
+<button onclick="order('Mchele 5kg')">Order kwa WhatsApp</button>
+</div>
+
+<div class="product">
+<h3>Mafuta ya Kupikia 3L</h3>
+<p>Bei: TZS 15,000</p>
+<button onclick="order('Mafuta 3L')">Order kwa WhatsApp</button>
+</div>
+
+<div class="product">
+<h3>Sukari 5kg</h3>
+<p>Bei: TZS 14,000</p>
+<button onclick="order('Sukari 5kg')">Order kwa WhatsApp</button>
+</div>
+
+<h2>Tropical Logistics - Tuma Mzigo</h2>
+<div class="product">
+<input id="from" placeholder="Kutoka wapi? Mfano: Dar es Salaam">
+<input id="to" placeholder="Kwenda wapi? Mfano: Arusha">
+<input id="item" placeholder="Mzigo gani?">
+<button onclick="sendLogistics()">Tuma Ombi la Logistics</button>
+</div>
+</div>
+
+<script>
+function order(product){
+window.open("https://wa.me/255700000000?text=Nataka ku-order "+product);
+}
+function sendLogistics(){
+var f=document.getElementById('from').value;
+var t=document.getElementById('to').value;
+var i=document.getElementById('item').value;
+window.open("https://wa.me/0741841463?text=Logistics: Kutoka "+f+" Kwenda "+t+" Mzigo: "+i);
+}
+</script>
+</body>
+</html>
