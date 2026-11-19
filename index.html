@@ -28,33 +28,33 @@ h2{color:#0a7a42}
 <div class="product">
 <h3>Rice 5kg</h3>
 <p>Bei: KES 18,000</p>
-<button onclick="order('Mchele 5kg')">Order kwa WhatsApp</button>
+<button onclick="order('Rice 5kg')">Order kwa via WhatsApp</button>
 </div>
 
 <div class="product">
 <h3>Cooking oil ya 3L</h3>
 <p>Price: KES 15,000</p>
-<button onclick="order('Mafuta 3L')">Order kwa WhatsApp</button>
+<button onclick="order('Cooking oil 3L')">Order via WhatsApp</button>
 </div>
 
 <div class="product">
 <h3>Sugar 5kg</h3>
 <p>Price: KES 14,000</p>
-<button onclick="order('Sukari 5kg')">Order kwa WhatsApp</button>
+<button onclick="order('Sugar5kg')">Order via WhatsApp</button>
 </div>
 
 <h2>Tropical Logistics - Tuma Mzigo</h2>
 <div class="product">
-<input id="from" placeholder="Kutoka wapi? Mfano: Dar es Salaam">
-<input id="to" placeholder="Kwenda wapi? Mfano: Arusha">
-<input id="item" placeholder="Mzigo gani?">
-<button onclick="sendLogistics()">Tuma Ombi la Logistics</button>
+<input id="from" placeholder="Start location? Mfano: Dar es Salaam">
+<input id="to" placeholder="End your location">
+<input id="item" placeholder="Type of Product?">
+<button onclick="sendLogistics()"> Send Request</button>
 </div>
 </div>
 
 <script>
 function order(product){
-window.open("https://wa.me/+254741841463?text=Nataka ku-order "+product);
+window.open("https://wa.me/+254741841463?text=i want to-order "+product);
 }
 function sendLogistics(){
 var f=document.getElementById('from').value;
